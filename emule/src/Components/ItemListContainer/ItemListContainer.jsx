@@ -29,7 +29,8 @@ export const itemsArray =[
     {id:11, category:"Notebook",brand:"#",desc:"XXXXXX",price:90000,pict: Notebook5},
     {id:12, category:"Netbook",brand:"#",desc:"XXXXXX",price:90000,pict: Netbook1 },
     {id:13, category:"Tablet",brand:"#",desc:"XXXXXX",price:90000,pict: Tablet4},
-];
+]; 
+
 
 export const ItemListContainer=({greeting})=>{
     const [ item , setItem ] = useState ([])

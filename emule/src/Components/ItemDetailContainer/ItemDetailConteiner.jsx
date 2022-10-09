@@ -30,6 +30,7 @@ export const ItemDetailContainer=()=>{
     <div className="item-detail-container">
         <p style={{width:"100%",color:"black"}}>item detail Container</p>
         <ItemDetail item={item}/>
+        
     </div>
    )
 }

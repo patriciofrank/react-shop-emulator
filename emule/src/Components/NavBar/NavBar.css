@@ -1,0 +1,16 @@
+.nav{
+display: flex;
+justify-content: space-around;
+align-items: center;
+background-color: cadetblue;
+}
+.logo{
+    max-width: 5rem;
+    margin-top: 1rem;
+}
+.nav_list{
+    list-style: none;
+    display: flex;
+    align-self: center;
+    gap: 1.5rem;
+}

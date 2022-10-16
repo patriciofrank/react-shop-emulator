@@ -16,19 +16,19 @@ import Notebook4 from "../../assets/Notebook4 hp 250.jpg"
 import Notebook5 from "../../assets/Notebook5 Spectre X360.jpg"
 
 export const itemsArray =[
-    {id:1, category:"Tablet",brand:"#",desc:"XXXXXX",price:20000,pict:Tablet1 },
-    {id:2, category:"Notebook",brand:"#",desc:"XXXXXX",price:120000,pict:Notebook1 },
-    {id:3, category:"Tablet",brand:"#",desc:"XXXXXX",price:220000,pict:Tablet2 },
-    {id:4, category:"Netbook",brand:"#",desc:"XXXXXX",price:90000,pict:Netbook4 },
-    {id:5, category:"Netbook",brand:"#",desc:"XXXXXX",price:90000,pict:Netbook3 },
-    {id:6, category:"Netbook",brand:"#",desc:"XXXXXX",price:90000,pict:Netbook2 },
-    {id:7, category:"Notebook",brand:"#",desc:"XXXXXX",price:90000,pict:Notebook2 },
-    {id:8, category:"Notebook",brand:"#",desc:"XXXXXX",price:90000,pict:Notebook3 },
-    {id:9, category:"Notebook",brand:"#",desc:"XXXXXX",price:90000,pict: Notebook4},
-    {id:10, category:"Tablet",brand:"#",desc:"XXXXXX",price:90000,pict:Tablet3 },
-    {id:11, category:"Notebook",brand:"#",desc:"XXXXXX",price:90000,pict: Notebook5},
-    {id:12, category:"Netbook",brand:"#",desc:"XXXXXX",price:90000,pict: Netbook1 },
-    {id:13, category:"Tablet",brand:"#",desc:"XXXXXX",price:90000,pict: Tablet4},
+    {id:1, category:"Tablet",brand:"#",desc:"XXXXXX",price:20000,pict:Tablet1  ,stock:10},
+    {id:2, category:"Notebook",brand:"#",desc:"XXXXXX",price:120000,pict:Notebook1  ,stock:10},
+    {id:3, category:"Tablet",brand:"#",desc:"XXXXXX",price:220000,pict:Tablet2  ,stock:10},
+    {id:4, category:"Netbook",brand:"#",desc:"XXXXXX",price:90000,pict:Netbook4  ,stock:10},
+    {id:5, category:"Netbook",brand:"#",desc:"XXXXXX",price:90000,pict:Netbook3  ,stock:10},
+    {id:6, category:"Netbook",brand:"#",desc:"XXXXXX",price:90000,pict:Netbook2  ,stock:10},
+    {id:7, category:"Notebook",brand:"#",desc:"XXXXXX",price:90000,pict:Notebook2  ,stock:10},
+    {id:8, category:"Notebook",brand:"#",desc:"XXXXXX",price:90000,pict:Notebook3  ,stock:10},
+    {id:9, category:"Notebook",brand:"#",desc:"XXXXXX",price:90000,pict: Notebook4 ,stock:10},
+    {id:10, category:"Tablet",brand:"#",desc:"XXXXXX",price:90000,pict:Tablet3 ,stock:10 },
+    {id:11, category:"Notebook",brand:"#",desc:"XXXXXX",price:90000,pict: Notebook5 ,stock:10},
+    {id:12, category:"Netbook",brand:"#",desc:"XXXXXX",price:90000,pict: Netbook1  ,stock:10},
+    {id:13, category:"Tablet",brand:"#",desc:"XXXXXX",price:90000,pict: Tablet4 ,stock:10},
 ]; 
 
 

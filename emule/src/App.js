@@ -3,7 +3,7 @@ import './App.css';
 import { ItemListContainer } from './Components/ItemListContainer/ItemListContainer';
 import {ItemDetailContainer} from './Components/ItemDetailContainer/ItemDetailConteiner';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
-import {Cart} from './Components/Cart/Cart'
+import {CartContainer} from './Components/CartContainer/CartContainer'
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
           <Route path='/' element={<ItemListContainer greeting="Emule Shop"/>}/>
           <Route path='/category/:Id' element={<ItemListContainer/>}/>
           <Route path='/item/:Id' element={<ItemDetailContainer/>}/>
-          <Route path='/cart' element={<Cart/>}/>
+          <Route path='/cart' element={<CartContainer/>}/>
         </Routes>
       </div>
     </BrowserRouter>

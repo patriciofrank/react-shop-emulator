@@ -1,6 +1,6 @@
 
 
-export const Cart=()=>{
+export const CartContainer=()=>{
     
     return(
         <div style={{border:"2px solid black", margin:"1rem"}}>

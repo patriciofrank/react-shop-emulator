@@ -1,6 +1,9 @@
 import { Itemlist} from "../ItemList/ItemList";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import {collection, doc, getDoc} from "firebase/firestore"
+import { db } from "../../utils/firebase";
+
 import Tablet1 from "../../assets/Tablet1 slate7.jpg"
 import Tablet2 from "../../assets/Tablet2 touchpad.webp"
 import Tablet3 from "../../assets/Tablet3 elite x 2.webp"

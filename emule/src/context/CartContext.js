@@ -7,23 +7,25 @@ export const CartProvider=({children})=>{
     const [productos , setProductos]= useState([]);
 
     const inTheCart = (id)=>{
+        // verify if the id is in cart 
         const productoExist = productos.some((elemento)=>elemento.id === id);
         return productoExist
     }
 
     const addProduct =(item ,cantidad)=>{
         const productosB = [...productos]
-        //modif cantidad de producto existente
+        //modificate product cart quantity
         if(inTheCart(item.id)){
             const productRep = productosB.findIndex((elemento)=>elemento.id === item.id);
             productosB[productRep].cantidad +=cantidad;
-            productosB[productRep].preciocantidad = productosB[productRep].cantidad*productosB[productRep].price;
+            productosB[productRep].precioCantidad = productosB[productRep].cantidad*productosB[productRep].price;
             setProductos(productosB);
         }else{
+            // add newproduct to cart
             const newProduct = {
                 ...item,
                 cantidad:cantidad,
-                preciocantidad:cantidad*item.price,
+                precioCantidad:cantidad*item.price,
             };
             productosB.push(newProduct)
             setProductos(productosB)
@@ -32,12 +34,12 @@ export const CartProvider=({children})=>{
     }
 
     const getTotalPrice=()=>{
-        const precioTotal=productos.reduce((acc,curr)=>acc+curr.preciocantidad,0);
+        const precioTotal=productos.reduce((acc,curr)=>acc+curr.precioCantidad,0);
         return precioTotal
     }
 
     const getProductosTotal =()=>{
-        const totalProductos=productos.reduce((acc,curr)=>curr.cantidad,0);
+        const totalProductos=productos.reduce((acc,curr)=>acc+curr.cantidad,0);
         return totalProductos;
     }
 

@@ -1,14 +1,14 @@
-import { useState } from "react";
 import { ItemCount } from "../ItemCount/ItemCount"
-
+import { CartContext } from "../../context/CartContext"
+import { useContext } from "react"
 
 export const ItemDetail=({item})=>{
-    const [stock, setStock]= useState(0)
+    const{addProduct}=useContext(CartContext);
     const agregar=(cantidad)=>{
-        console.log(cantidad)
-        setStock(cantidad)
-    };
-
+        // add Product and quantity
+            addProduct(item,cantidad)       
+        };
+    
     return(
         
         <div>
@@ -16,8 +16,8 @@ export const ItemDetail=({item})=>{
             <h1>Categoria: {item.category}</h1>
             <p>Descripcion{item.desc}</p>
             <p>Precio: {item.price}</p>
-            <p>Stock de productos: {item.stock-stock}</p>
-            <ItemCount  cantidad={stock} stock={item.stock} onAdd={agregar} />
+            <p>Stock de productos: {item.stock}</p>
+            <ItemCount  stock={item.stock} initial={0}  onAdd={agregar} />
         </div>
     )
 }

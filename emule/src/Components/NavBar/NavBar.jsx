@@ -15,7 +15,9 @@ export const NavBar =()=> {
                   <li><Link to='/category/Netbook' >Netbooks</Link></li>
                   <li><Link to='/category/Tablet' >Tablets</Link></li>
               </ul>
-          <CartWidgets/>
+          <Link to='/cart'>    
+            <CartWidgets/>
+          </Link>
       </div>
     );
   }

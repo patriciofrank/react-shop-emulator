@@ -16,8 +16,7 @@ export const ItemDetail=({item})=>{
             <h1>Categoria: {item.category}</h1>
             <p>Descripcion{item.desc}</p>
             <p>Precio: {item.price}</p>
-            <p>Stock de productos: {item.stock}</p>
-            <ItemCount  stock={item.stock} initial={0}  onAdd={agregar} />
+            <ItemCount  stock={10} initial={0}  onAdd={agregar} />
         </div>
     )
 }

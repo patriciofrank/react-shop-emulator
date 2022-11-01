@@ -20,6 +20,7 @@ export const ItemCount=({stock, onAdd, initial})=>{
     const BotonCart=()=>{
     
         return(<div>
+            <p>Stock de productos: {stock}</p>
             <p>Conteo={contador}</p>
             <button onClick={sumar}>+</button>
             <button disabled={stock===0} onClick={()=>onAdd(contador)}>Agregar</button>

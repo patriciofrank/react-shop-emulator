@@ -5,12 +5,12 @@ export const CartContainer = () => {
     const value= useContext(CartContext);
     const {productos,getTotalPrice,getProductosTotal,deleteItem}=value;
     console.log(productos);
-    
+    const carritoVacio = productos.length 
     return(
     <div>
-        <p>Carrito</p>
         <div style={{width:"30rem"}}>
          {
+            carritoVacio ? 
              productos.map((product)=>(
                  <div style={{display:"flex",maxwidth:"768px"}} >
                     <img style={{width:"10rem"}} src={product.pict} alt="imagen de producto" />
@@ -22,10 +22,21 @@ export const CartContainer = () => {
                  </div>
              )
              )
+             :
+            <>
+            <h4 style={{textaling:"center",width:"auto"}}>No hay productos en el carrito</h4>
+            </>
          }
          </div>
+         { carritoVacio ?
+         <>
          <h4>Precio Total: {getTotalPrice()}</h4>
          <h4>Total de productos : {getProductosTotal()}</h4>
+         <button>Finalizar</button>
+         </>
+         :
+         <p>Agregue algunos productos al carrito</p>
+        }
      </div>
     )
 } 

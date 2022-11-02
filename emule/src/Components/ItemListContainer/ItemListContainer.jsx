@@ -8,7 +8,7 @@ export const ItemListContainer=({greeting})=>{
     const [ item , setItem ] = useState ([])
     const categoryId = useParams().Id
     console.log(categoryId)
-   
+    const[loading, setLoading]=useState(true)
 
     useEffect(()=>{
             // create reference for query 
@@ -23,7 +23,8 @@ export const ItemListContainer=({greeting})=>{
                     }
                 });
                
-                setItem(docs)
+                setItem(docs);
+                setLoading(false);
             });
             
     },[categoryId])
@@ -31,7 +32,13 @@ export const ItemListContainer=({greeting})=>{
     return(
        <div className="productContainer">
         {greeting}
-        <Itemlist items={item}/>
+        {
+            loading?
+            <p>Cargando....</p>
+            :
+            <Itemlist items={item}/>
+        }
+        
        </div>
     )
 }

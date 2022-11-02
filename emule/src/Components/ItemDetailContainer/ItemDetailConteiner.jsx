@@ -5,29 +5,35 @@ import { doc, getDoc} from "firebase/firestore"
 import { db } from "../../utils/firebase";
 
 export const ItemDetailContainer=()=>{
-    const [ item , setItem ] = useState ({})
-    const {id} = useParams()
+    const [ itemProduct , setItemProduct ] = useState ({})
+    const [loading, setLoading]=useState(true)
+    const {Id} = useParams()
 
     useEffect(()=>{
         const getItem = async ()=>{
             //create ref
-            const queryRef= doc(db,"productos",id);
+            const queryRef= doc(db,"productos",Id);
              //do the query
              const resolve = await getDoc(queryRef);
              const newDoc = {
                 ...resolve.data(),
                 id:resolve.id
              }
-            setItem(newDoc)   
+            setItemProduct(newDoc) 
+            setLoading(false)  
         }    
         getItem();
-    },[id])
+    },[Id])
      
    return(
     <div className="item-detail-container">
-        <p style={{width:"100%",color:"black"}}>item detail Container</p>
-        <ItemDetail item={item}/>
-        
+        {
+            loading ? 
+            <p>Cargando...</p>
+            :
+            <ItemDetail item={itemProduct}/>
+        }
+       
     </div>
    )
 }

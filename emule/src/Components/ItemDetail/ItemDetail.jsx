@@ -4,9 +4,11 @@ import { useContext } from "react"
 
 export const ItemDetail=({item})=>{
     const{addProduct}=useContext(CartContext);
+    
     const agregar=(cantidad)=>{
         // add Product and quantity
             addProduct(item,cantidad)       
+    
         };
     
     return(
@@ -16,7 +18,7 @@ export const ItemDetail=({item})=>{
             <h1>Categoria: {item.category}</h1>
             <p>Descripcion{item.desc}</p>
             <p>Precio: {item.price}</p>
-            <ItemCount  stock={10} initial={0}  onAdd={agregar} />
+            <ItemCount  stock={item.stock} initial={0}  onAdd={agregar} />
         </div>
     )
 }

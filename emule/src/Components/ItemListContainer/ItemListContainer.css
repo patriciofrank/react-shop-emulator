@@ -1,0 +1,10 @@
+.productContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.titulo{
+    font-size: 3rem;
+    font-weight: 400;
+    text-decoration: underline;
+}

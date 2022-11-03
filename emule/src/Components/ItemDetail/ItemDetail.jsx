@@ -1,7 +1,7 @@
 import { ItemCount } from "../ItemCount/ItemCount"
 import { CartContext } from "../../context/CartContext"
 import { useContext } from "react"
-
+import "./ItemDetail.css"
 export const ItemDetail=({item})=>{
     const{addProduct}=useContext(CartContext);
     
@@ -13,7 +13,7 @@ export const ItemDetail=({item})=>{
     
     return(
         
-        <div>
+        <div className="itemDetail">
             <img style={{width:"20rem"}} src={item.pict} alt="Product pict" />
             <h1>Categoria: {item.category}</h1>
             <p>Descripcion{item.desc}</p>

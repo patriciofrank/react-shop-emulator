@@ -21,7 +21,7 @@ export const ItemCount=({stock, onAdd, initial})=>{
             icon: 'success',
             title: 'El producto se agrego al carrito!',
             showConfirmButton: false,
-            timer: 1000
+            timer: 2000
           })
     );
     // Change boton after add product

@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import {collection, getDocs ,query,where} from "firebase/firestore"
 import { db } from "../../utils/firebase";
 import {LoadingComp} from "../LoadingComp/LoadingComp"
+import "./ItemListContainer.css"
 
 export const ItemListContainer=({greeting})=>{
     const [ item , setItem ] = useState ([])
@@ -31,15 +32,19 @@ export const ItemListContainer=({greeting})=>{
     },[categoryId])
     
     return(
-       <div className="productContainer">
-        {greeting}
+        <>
+         <h1 className="titulo">{greeting}</h1>
+      
+       
         {
             loading?
             <LoadingComp/>
             :
+            <div className="productContainer">    
             <Itemlist items={item}/>
+            </div>
         }
-        
-       </div>
+      
+       </>
     )
 }

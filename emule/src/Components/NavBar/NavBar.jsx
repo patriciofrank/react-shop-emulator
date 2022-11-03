@@ -1,13 +1,13 @@
 import "./NavBar.css"
 import { CartWidgets } from "../CartWidgets/CartWidgets";
 import { Link } from "react-router-dom";
-
+import logo from "../../assets/Logo.png"
 export const NavBar =()=> {
     return (
       <div className="nav">
         <div>
-          <Link to='/'><img className="logo" src="https://play-lh.googleusercontent.com/EnxJKkoXzxrmA0RA0gUie0K4gvbRLrQhpflyMzwSMvCfk2FA6o9sBLzfWtG5qLzIBIc" alt="Logo Shop Emule" /></Link>
-          <p>Shop Emule</p>
+          <Link to='/'><img className="logo" src={logo} alt="Logo Shop Emule" /></Link>
+          <p>Emule Shop </p>
         </div>  
               <ul className="nav_list">
                   <li><Link to='/' >Products</Link></li>

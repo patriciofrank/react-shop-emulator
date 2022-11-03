@@ -14,3 +14,9 @@ background-color: cadetblue;
     align-self: center;
     gap: 1.5rem;
 }
+.nav a{
+    color: black;
+    font-size: larger;
+    font-weight: 400;
+    text-decoration: none;
+}

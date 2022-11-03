@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import  {CartContext} from "../../context/CartContext"
-
+import "./CartContainer.css"
 export const CartContainer = () => {
     const value= useContext(CartContext);
     const {productos,getTotalPrice,getProductosTotal,deleteItem}=value;
@@ -8,11 +8,11 @@ export const CartContainer = () => {
     const carritoVacio = productos.length 
     return(
     <div>
-        <div style={{width:"30rem"}}>
+        <div className="cartContainer">
          {
             carritoVacio ? 
              productos.map((product)=>(
-                 <div style={{display:"flex",maxwidth:"768px"}} >
+                 <div className="cartItem" >
                     <img style={{width:"10rem"}} src={product.pict} alt="imagen de producto" />
                      <h3>{product.category}</h3>
                      <p>precio unitario: {product.price}</p>
@@ -32,7 +32,7 @@ export const CartContainer = () => {
          <>
          <h4>Precio Total: {getTotalPrice()}</h4>
          <h4>Total de productos : {getProductosTotal()}</h4>
-         <button>Finalizar</button>
+         <button className="btnF">Finalizar</button>
          </>
          :
          <p>Agregue algunos productos al carrito</p>

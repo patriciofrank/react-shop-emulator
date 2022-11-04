@@ -9,7 +9,7 @@ import "./ItemListContainer.css"
 export const ItemListContainer=({greeting})=>{
     const [ item , setItem ] = useState ([])
     const categoryId = useParams().Id
-    console.log(categoryId)
+    // console.log(categoryId)
     const[loading, setLoading]=useState(true)
 
     useEffect(()=>{

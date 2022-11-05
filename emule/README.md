@@ -48,7 +48,7 @@ Con el fin de aplicar y practicar las logicas y metodologias aprendidas como asi
     - sweetalert2: Alertas del sistema "validacion de compra y entrega de id de orden de compra" 
 
 ## Imagen de tienda
-![imagenTienda](emule/src/assets/tienda.png)
+![imagenTienda](src/assets/tienda.png)
     
 ___
 ## Getting Started with Create React App

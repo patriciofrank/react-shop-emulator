@@ -1,34 +1,37 @@
-#React shop Emulator
+# React shop Emulator
 ## La tienda Online
 Es un emulador de tienda online de Tablets , Netbooks y Notebooks.
 
 En esta tienda se puede:
 
-*1.Filtrar los productos segun su categoria*
-*2.Crear un carrito de compras*
-*3.Finalizar la compra completando datos y obteniendo el numero de orden que se almacena en la base de datos*
+1. *Filtrar los productos segun su categoria*
+2. *Crear un carrito de compras*
+3. *Finalizar la compra completando datos y obteniendo el numero de orden que se almacena en la base de datos*
 
 Se realizo esta tienda online como proyecto de curso de React js Coderhouse.
->implementando conocimientos de:
-                    -Html
-                    -Css
-                    -JavaScrip
-                    -React Js
-
+> implementando conocimientos de:
+                  ```sh  
+                    - Html -
+                    - Css -
+                    - JavaScrip -
+                    - React Js -
+                    ```
 Con el fin de aplicar y practicar las logicas y metodologias aprendidas como asi tambien para ser evaluada.
 
-##Descarga de proyecto
--Realizar git clon del proyecto.
--Ejecutar npm Instal para instalar dependencias del proyecto.
--Ejecutar npm start para ejecutar el proyecto.
-**El mismo se ejecutara en** [http://localhost:3000](http://localhost:3000)
+## Descarga de proyecto
+- Realizar git clon del proyecto. -
+- Ejecutar npm Instal para instalar dependencias del proyecto. -
+- Ejecutar npm start para ejecutar el proyecto. -
+- **El mismo se ejecutara en** [http://localhost:3000](http://localhost:3000) -
 
-**##Documentacion Complementadia de descarga##**
-    -bootstrap: Configuracion de estilos
-    -reactstrap: Configuracion de estilos
-    -firebase: Base de datos de Productos y Ordenes
-    -react-router-dom: Para el funcionamiento de enlaces
-    -sweetalert2: Alertas del sistema "validacion de compra y entrega de id de orden de compra"
+## Documentacion Complementadia de descarga  
+
+
+    - bootstrap: Configuracion de estilos -
+    - reactstrap: Configuracion de estilos -
+    - firebase: Base de datos de Productos y Ordenes -
+    - react-router-dom: Para el funcionamiento de enlaces -
+    - sweetalert2: Alertas del sistema "validacion de compra y entrega de id de orden de compra" -
     
 ___
 ## Getting Started with Create React App

@@ -18,10 +18,70 @@ h4{
 }
 .btnF{
     width: 50%;
+    grid-area: button;
+    justify-self: center;
+    margin-top: 1.5rem;
 }
 button{
     background-color: black;
     color:white;
     font-size: larger;
     margin: 1rem;
+}
+.tituloForm{
+    margin: 4rem auto 2rem auto;
+    font-weight: 400;
+
+}
+.formulario{
+    display: grid;
+ grid-template-areas:   "label1 input1"
+                        "label2 input2"
+                        "label3 input3"
+                        "label4 input4"
+                        "label5 input5"
+                        "label6 input6"
+                        "button button";
+}
+.nombreL{
+    grid-area: label1;
+}
+.nombreI{
+    grid-area: input1;
+    max-width: 80%;
+}
+.lastnameL{
+    grid-area: label2;
+}
+.lastnameI{
+    grid-area: input2;
+    max-width: 80%;
+}
+.cpL{
+    grid-area: label3;
+}
+.cpI{
+    grid-area: input3;
+    max-width: 80%;
+}
+.adressL{
+    grid-area: label4;
+}
+.adressI{
+    grid-area: input4;
+    max-width: 80%;
+}
+.mailL{
+    grid-area: label5;
+}
+.mailI{
+    grid-area: input5;
+    max-width: 80%;
+}
+.telL{
+    grid-area: label6;
+}
+.telI{
+    grid-area: input6;
+    max-width: 80%;
 }

@@ -11,7 +11,7 @@ export const CartContainer = () => {
     // console.log(productos);
     const carritoVacio = productos.length ;
     const hoy = new Date().toString();
-
+    //alert order ID
     const alertaFinal =(a)=>{
         Swal.fire({
             title: 'Su compra fue realizada',
@@ -22,7 +22,7 @@ export const CartContainer = () => {
             focusConfirm: false,
         })
     }
-
+    //render order info to firebase
     const finishOrder =(evt)=>{
         evt.preventDefault();
         const compra = {
@@ -43,6 +43,7 @@ export const CartContainer = () => {
         //add Order
         addDoc(ordenCompra,compra).then((result)=>alertaFinal(result.id)).catch((error)=>console.log(error))
     }
+    //refresh and delete cart after buy
     const refresh = ()=>{
       setTimeout(() => {
         window.location.reload()
@@ -52,48 +53,49 @@ export const CartContainer = () => {
     return(
     <div>
         <div className="cartContainer">
-         {
-            carritoVacio ? 
-             productos.map((product)=>(
-                 <div className="cartItem" >
-                    <img style={{width:"10rem"}} src={product.pict} alt="imagen de producto" />
-                     <h3>{product.category}</h3>
-                     <p>precio unitario: {product.price}</p>
-                     <p>cantidad: {product.cantidad}</p>
-                     <p>precio por cantidad: {product.precioCantidad}</p>
-                     <button onClick={()=> deleteItem(product.id)}>Eliminar</button>
-                 </div>
-             )
-             )
-             :
-            <>
-            <h4 style={{textaling:"center",width:"auto"}}>No hay productos en el carrito</h4>
-            </>
-         }
+            {
+                carritoVacio ? 
+                productos.map((product)=>(
+                    <div className="cartItem" >
+                        <img style={{width:"10rem"}} src={product.pict} alt="imagen de producto" />
+                        <h3>{product.category}</h3>
+                        <p>precio unitario: {product.price}</p>
+                        <p>cantidad: {product.cantidad}</p>
+                        <p>precio por cantidad: {product.precioCantidad}</p>
+                        <button onClick={()=> deleteItem(product.id)}>Eliminar</button>
+                    </div>
+                )
+                )
+                :
+                <>
+                <h4 style={{textaling:"center",width:"auto"}}>No hay productos en el carrito</h4>
+                </>
+            }
          </div>
-         { carritoVacio ?
-         <>
-         <h4>Precio Total: {getTotalPrice()}</h4>
-         <h4>Total de productos : {getProductosTotal()}</h4>
-         <form onSubmit={finishOrder}>
-            <label>Nombre:</label>
-            <input required min="1" type="text" name="name"/>
-            <label>Apellido:</label>
-            <input required min="1" type="text" name="lastname"/>
-            <label>C.P:</label>
-            <input required min="2" type="number" name="postalCode"/>
-            <label>Direccion:</label>
-            <input required min="8" type="text" name="adress"/>
-            <label>E-mail:</label>
-            <input required min="5" type="email" name="mail"/>
-            <label>Telefono:</label>
-            <input required min="8" type="tel" name="phoneNumber"/>
-            <button type="submit" className="btnF" onClick={()=>(alertaFinal)}>Finalizar</button>
-        </form>
-        
-         </>
-         :
-         <p>Agregue algunos productos al carrito</p>
+        { 
+        carritoVacio ?
+            <>
+                <h4>Precio Total: {getTotalPrice()}</h4>
+                <h4>Total de productos : {getProductosTotal()}</h4>
+                <h2 className="tituloForm">Completar Formulario de Envio de Productos</h2>
+                <form className="formulario" onSubmit={finishOrder}>
+                    <label className="nombreL">Nombre:</label>
+                    <input className="nombreI" required min="1" type="text" name="name"/>
+                    <label className="lastnameL">Apellido:</label>
+                    <input className="lastnameI" required min="1" type="text" name="lastname"/>
+                    <label className="cpL">C.P:</label>
+                    <input className="cpI" required min="2" type="number" name="postalCode"/>
+                    <label className="adressL" >Direccion:</label>
+                    <input className="adressI" required min="8" type="text" name="adress"/>
+                    <label className="mailL">E-mail:</label>
+                    <input className="mailI" required min="5" type="email" name="mail"/>
+                    <label className="telL">Telefono:</label>
+                    <input className="telI" required min="8" type="number" name="phoneNumber"/>
+                    <button type="submit" className="btnF" onClick={()=>(alertaFinal)}>Finalizar</button>
+                </form>
+            </>
+            :
+            <p>Agregue algunos productos al carrito</p>
         }
      </div>
     )

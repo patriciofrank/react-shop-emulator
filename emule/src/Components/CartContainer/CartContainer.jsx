@@ -16,7 +16,9 @@ export const CartContainer = () => {
         Swal.fire({
             title: 'Su compra fue realizada',
             icon: 'success',
-            html:'<b>Numero de Orden:</b>'+ a, 
+            html:'<b>Numero de Orden:</b>'+ a
+            +'</br>'
+            +'Se enviara la informacion y factura de la compra al mail designado', 
             showCloseButton:true + refresh(),
             showCancelButton: true,
             focusConfirm: false,
@@ -47,7 +49,7 @@ export const CartContainer = () => {
     const refresh = ()=>{
       setTimeout(() => {
         window.location.reload()
-      }, 5000);  
+      }, 10000);  
     }
    
     return(

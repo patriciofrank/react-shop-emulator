@@ -49,7 +49,9 @@ export const CartProvider = ({ children }) => {
     );
     return totalProductos;
   };
-
+  const deleteCart = () => {
+    setProductos([]);
+  };
   const deleteItem = (id) => {
     const newProduct = productos.filter((element) => element.id !== id);
     setProductos(newProduct);
@@ -62,7 +64,7 @@ export const CartProvider = ({ children }) => {
         getTotalPrice,
         getProductosTotal,
         deleteItem,
-      
+        deleteCart,
       }}
     >
       {children}

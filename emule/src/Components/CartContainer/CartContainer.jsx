@@ -5,31 +5,36 @@ import { CartForm } from "../CartForm/CartForm";
 import { Link } from "react-router-dom";
 import { Button } from "reactstrap";
 
-
 export const CartContainer = () => {
   const value = useContext(CartContext);
-  const { productos, getTotalPrice, getProductosTotal, deleteItem, deleteCart } = value;
+  const {
+    productos,
+    getTotalPrice,
+    getProductosTotal,
+    deleteItem,
+    deleteCart,
+  } = value;
   // console.log(productos);
   const carritoVacio = productos.length;
-   
+
   return (
     <div>
       <div className="cartContainer">
         {carritoVacio ? (
           productos.map((product) => (
             <>
-            <div className="cartItem">
-              <img
-                style={{ width: "10rem" }}
-                src={product.pict}
-                alt="imagen de producto"
-              />
-              <h3>{product.category}</h3>
-              <p>precio unitario: {product.price}</p>
-              <p>cantidad: {product.cantidad}</p>
-              <p>precio por cantidad: {product.precioCantidad}</p>
-              <button onClick={() => deleteItem(product.id)}>Eliminar</button>
-            </div>
+              <div className="cartItem">
+                <img
+                  style={{ width: "10rem" }}
+                  src={product.pict}
+                  alt="imagen de producto"
+                />
+                <h3>{product.category}</h3>
+                <p>precio unitario: {product.price}</p>
+                <p>cantidad: {product.cantidad}</p>
+                <p>precio por cantidad: {product.precioCantidad}</p>
+                <button onClick={() => deleteItem(product.id)}>Eliminar</button>
+              </div>
             </>
           ))
         ) : (
@@ -42,6 +47,7 @@ export const CartContainer = () => {
       </div>
       {carritoVacio ? (
         <>
+          <button onClick={() => deleteCart()}>EliminarCarrito</button>
           <h4>Precio Total: {getTotalPrice()}</h4>
           <h4>Total de productos : {getProductosTotal()}</h4>
           <h2 className="tituloForm">
@@ -50,7 +56,9 @@ export const CartContainer = () => {
           <CartForm />
         </>
       ) : (
-        <Link to={"/"} ><Button>Agregue algunos productos al carrito</Button></Link>
+        <Link to={"/"}>
+          <Button>Agregue algunos productos al carrito</Button>
+        </Link>
       )}
     </div>
   );

@@ -25,9 +25,9 @@ Con el fin de aplicar y practicar las logicas y metodologias aprendidas como asi
 
 
 ## Descarga de proyecto
-- Realizar git clon del proyecto. 
+- Realizar git clone del repositorio. 
 
-- Ejecutar npm Instal para instalar dependencias del proyecto. 
+- Ejecutar npm Install para instalar dependencias del proyecto. 
 
 - Ejecutar npm start para ejecutar el proyecto. 
 

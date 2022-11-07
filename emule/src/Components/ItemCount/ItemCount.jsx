@@ -14,6 +14,7 @@ export const ItemCount=({stock, onAdd, initial})=>{
         setContador(contador-1)
         }
     };
+    
     // Alert confirmation
     const alertAddProduct=()=>(
         Swal.fire({
@@ -24,6 +25,7 @@ export const ItemCount=({stock, onAdd, initial})=>{
             timer: 2000
           })
     );
+   
     // Change boton after add product
     console.log(stock)
     const BotonCart=()=>{

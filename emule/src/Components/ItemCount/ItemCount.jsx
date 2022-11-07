@@ -25,6 +25,7 @@ export const ItemCount=({stock, onAdd, initial})=>{
           })
     );
     // Change boton after add product
+    console.log(stock)
     const BotonCart=()=>{
     
         return(<div>
@@ -34,7 +35,7 @@ export const ItemCount=({stock, onAdd, initial})=>{
             <p>Stock de productos: {stock}</p>
             <p>Conteo={contador}</p>
             <button onClick={sumar}>+</button>
-            <button disabled={stock===0} onClick={()=>onAdd(contador,setFinalizar(false),alertAddProduct())}>Agregar</button>
+            <button onClick={()=>onAdd(contador,setFinalizar(false),alertAddProduct())}>Agregar</button>
             <button onClick={quitar}>-</button>
             </>
             :
@@ -43,11 +44,7 @@ export const ItemCount=({stock, onAdd, initial})=>{
             <Link to="/"><button>Continuar Comprando</button></Link>      
             </>
             }
-            
          </div>)
-    
-     
-     
     }
   
     return(

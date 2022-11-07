@@ -4,13 +4,13 @@ import { useContext } from "react"
 import "./ItemDetail.css"
 export const ItemDetail=({item})=>{
     const{addProduct}=useContext(CartContext);
+    const stockDisponible=item.stock
     
     const agregar=(cantidad)=>{
         // add Product and quantity
             addProduct(item,cantidad)       
     
         };
-    
     return(
         
         <div className="itemDetail">
@@ -18,7 +18,13 @@ export const ItemDetail=({item})=>{
             <h1>Categoria: {item.category}</h1>
             <p>Descripcion{item.desc}</p>
             <p>Precio: {item.price}</p>
-            <ItemCount  stock={item.stock} initial={0}  onAdd={agregar} />
+            {
+                stockDisponible  ? 
+                <ItemCount  stock={stockDisponible} initial={1}  onAdd={agregar} />
+                :
+                "No hay stock del producto"
+            }
+            
         </div>
     )
 }
